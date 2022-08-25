@@ -109,6 +109,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "myResume2:build:production",
+            "firebaseProject": "profile-of-migal",
+            "firebaseHostingSite": "profile-of-migal"
+          }
         }
       }
     }

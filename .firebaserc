@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "profile-of-migal": {
+      "hosting": {
+        "myResume2": [
+          "profile-of-migal"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "profile-of-migal"
+  }
+}
