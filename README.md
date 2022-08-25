@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Bootstrap
+
+`npm install bootstrap`
+
+add file `'variables.scss';` to `assets/styles/` with variable overrides
+
+add `@import 'assets/styles/variables.scss';` to styles.scss
+
+add `@import '~bootstrap/scss/bootstrap.scss';` to styles.scss
+
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
+https://icons.getbootstrap.com/
