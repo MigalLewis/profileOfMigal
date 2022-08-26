@@ -1,0 +1,82 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.landing {
+    display: grid;
+    height: 100vh;
+    padding: 24px;
+    background-image: url('../../../../../assets/images/Migal_begin_journey_web.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.text-overlay {
+    position: relative;
+    width: 492px;
+    left: 100px;
+    top: 234px;
+    height: 280px;
+    background: rgba(151, 197, 171, 0.64);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.hi {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #23191A;
+
+    span {
+        color: #0E7388;
+    }
+}
+
+.who {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #23191A;
+}
+
+.meaning {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration-line: underline;
+
+    color: #23191A;
+}
+
+.meaning-value {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #23191A;
+}
+
+@media only screen and (max-width: 600px) {
+    .landing {
+        // background-image: url('../../../../../assets/images/homepage_mobile2.jpg');
+    }
+    .text-overlay {
+        width: calc(100% - 24px);
+    }
+    .tag-line {
+        padding: 12px;
+        width: 100%;
+        height: 50%;
+    }
+
+}
