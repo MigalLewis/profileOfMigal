@@ -1,6 +1,6 @@
 $primary: #2A7A87;
 $secondary: #3a666d;
-$tertiary: #C98F24;
+$tertiary: rgb(251, 253, 213);
 $forth: #E3B220;
 
 $darkToSecondary: linear-gradient(180deg, #000000, #0a1014, #111a20, #14242d, #172e3a, #183848, #1a4356, #1a4e65);
@@ -8,12 +8,14 @@ $secondaryToPrimary: linear-gradient(to right bottom, #2a7a87, #307580, #34707a,
 $primaryToTertiary: linear-gradient(180deg, #2a7a87, #128383, #1b8b77, #399165, #5b954f, #7e9739, #a29527, #c98f24);
 $secondaryToPrimary2: linear-gradient(to right bottom, #3a666d, #376b73, #34707a, #307580, #2a7a87);;
 $secondaryToWhite: linear-gradient(180deg, #000000, #242424, #434343, #656565, #898989, #afafaf, #d6d6d6, #ffffff);
+$overlay: rgba(251, 253, 213, 0.64);
+
 
 $info: #7854e4;
 $warning: #D87923;
 $success: #5B6C41;
 $danger: #d62518;
-$dark: black; 
+$dark: #23191A; 
 
 $white: white;
 
