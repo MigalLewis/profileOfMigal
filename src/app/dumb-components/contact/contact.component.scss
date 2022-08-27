@@ -7,7 +7,10 @@
     padding: 12px;
     height: 96vh;
     width: 64px;
-    margin: 2vh 0;
+    margin: 2vh 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .email {
@@ -16,10 +19,24 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
+    margin-bottom: 222px;
     
     color: $dark;
     
-    transform: rotate(89.56deg);
+    transform: rotate(90deg);
+}
+
+.vl {
+    border-right: 1px solid #0E7388;
+    height: 60px;
+    margin-bottom: 12px;
+    width: 20px;
+}
+
+.logo {
+    width:42;
+    height:42;
+    margin: 12px 0;
 }
 
 @media screen and (max-width: 575px) {
