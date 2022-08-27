@@ -1,0 +1,73 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.about-me {
+ background: $secondary;
+ text-align: center;
+ height: 100vh;
+ position: relative;
+}
+
+.overlay-2 {
+    width: 100vw;
+    height: 100%;
+    background-color: $overlay2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.overlay-1 {
+    width: 100vw;
+    height: 100%;
+    background: $background2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    z-index: 2;
+    position: relative;
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 85px;
+
+    color: #FFFFFF;
+    margin-bottom: 64px;
+}
+
+img {
+    border-radius: 50%;
+    height: 336px;
+    width: 336px;
+}
+
+.header {
+    text-align: left;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+    /* identical to box height */
+
+    margin-top: 48px;
+    color: #F5F5F5;
+}
+
+.content {
+    text-align: left;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+}
