@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page.component';
 import { DumbComponentsModule } from 'src/app/dumb-components/dumb-components.module';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
+import { MyExperienceComponent } from './my-experience/my-experience.component';
 
 
 
@@ -13,7 +14,8 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
     LandingComponent,
     HomePageComponent,
     MySkillsComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    MyExperienceComponent
   ],
   imports: [
     CommonModule,
