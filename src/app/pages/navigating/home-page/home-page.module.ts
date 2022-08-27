@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { HomePageComponent } from './home-page.component';
 import { DumbComponentsModule } from 'src/app/dumb-components/dumb-components.module';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
 
 
 
@@ -11,6 +12,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
   declarations: [
     LandingComponent,
     HomePageComponent,
+    MySkillsComponent,
     AboutMeComponent
   ],
   imports: [
