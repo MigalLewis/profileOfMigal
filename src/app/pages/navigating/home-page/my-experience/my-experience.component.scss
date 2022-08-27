@@ -9,6 +9,81 @@
  background-attachment: fixed;
  background-size: cover;
  position: relative;
+
+ .logo-0 {
+    right: 36%;
+    bottom: 6%;
+    width: 124px;
+    height: 124px;
+    position: absolute;
+ }
+
+ .logo-1 {
+    right: 12%;
+    bottom: 16%;
+    width: 124px;
+    height: 124px;
+    position: absolute;
+ }
+
+ .logo-2 {
+    right: 24%;
+    bottom: 32%;
+    width: 155px;
+    height: 125px;
+    position: absolute;
+ }
+
+ .logo-3 {
+    right: 24%;
+    bottom: 40%;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+ }
+
+ .logo-4 {
+    left: 40%;
+    top: 46%;
+    width: 419px;
+    height: 97px;
+    position: absolute;
+ }
+
+ .logo-5 {
+    left: 18%;
+    top: 42%;
+    width: 184px;
+    height: 53px;
+    position: absolute;
+ }
+
+ .logo-6 {
+    left: 18%;
+    top: 46%;
+    width: 124px;
+    height: 124px;
+    position: absolute;
+ }
+
+ .logo-7 {
+    left: 42%;
+    top: 26%;
+    width: 164px;
+    height: 164px;
+    position: absolute;
+
+    rect {
+        width: 164px;
+        height: 164px;
+    }
+
+    image {
+        width: 160px;
+        height: 160px;
+    }
+ }
+
 }
 
 .overlay {
