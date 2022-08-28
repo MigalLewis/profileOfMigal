@@ -12,7 +12,7 @@
 
  .logo-0 {
     right: 36%;
-    bottom: 6%;
+    bottom: 9%;
     width: 124px;
     height: 124px;
     position: absolute;
@@ -83,6 +83,26 @@
         height: 160px;
     }
  }
+
+ .footstep {
+    width:46px;
+    height: 37px;
+    position: absolute;
+    opacity: 0;
+    animation: fadeIn, fadeOut;
+    animation-duration: 17s, 17s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+ }
+
+ @keyframes fadeIn {
+    10% {opacity: 1};
+    100% {opacity: 1};
+  }
+  @keyframes fadeOut {
+    25% {opacity: 0};
+    100% {opacity: 0};
+  }
 
 }
 
