@@ -1,16 +1,16 @@
 <div class="job-group">
-    <svg class="logo-0" viewBox="0 0 124 125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <rect y="0.533447" width="124" height="124.184" [fill]="logoPattern"/>
+    <svg *ngIf="experience" class="logo" viewBox="0 0 124 125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect y="0.533447" width="124" height="124.184" [attr.fill]="logoPattern"/>
     </svg>
     <div class="projects">
         <div class="row">
             <div class="col-3">
-                <button class="project-name" *ngFor="let project of company.projects">
+                <button class="project-name" *ngFor="let project of experience?.projects">
                     {{project.name}}
                 </button>
             </div>
             <div class="col-9">
-                <div class="project-description">
+                <div *ngIf="selectedProject" class="project-description">
                     <p *ngFor="let description of selectedProject.description"></p>
                 </div>
             </div>

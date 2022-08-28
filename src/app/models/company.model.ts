@@ -1,10 +1,22 @@
+import * as firebase from 'firebase/firestore';
+
 export interface Company {
     name:string;
     logo: string;
-    projects?: Project[];
 }
 
 export interface Project {
     name:string;
     description: string[];
+    technologies: string[];
+}
+
+export interface Experience {
+    id?: string;
+    dateFrom: firebase.Timestamp;
+    dateTo: firebase.Timestamp;
+    company: Company;
+    position: string;
+    description?: string;
+    projects: Project[];
 }

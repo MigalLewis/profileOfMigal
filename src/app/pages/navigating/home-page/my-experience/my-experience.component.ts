@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Company, Experience } from 'src/app/models/company.model';
 import { Footstep } from 'src/app/models/footstep.model';
+import { ExperienceService } from 'src/app/services/experience.service';
 
 @Component({
   selector: 'app-my-experience',
@@ -9,8 +11,11 @@ import { Footstep } from 'src/app/models/footstep.model';
 export class MyExperienceComponent implements OnInit {
 
   footsteps: Footstep[];
+  experience: Experience[];
+  selectedExperience: Experience | undefined;
 
-  constructor() { 
+  constructor(private experienceService: ExperienceService) { 
+    
     this.footsteps = [
       {x: '52%', y:'4%'},
       {x: '53%', y:'9%'},
@@ -46,10 +51,16 @@ export class MyExperienceComponent implements OnInit {
       {x: '39%', y:'68%', transform: 'rotate(26deg)'},
     ];
     this.footsteps = this.setStartEnd(0.5, 3.5,0.5,this.footsteps);
-    console.log(this.footsteps)
+    this.experience = [];
+    this.selectedExperience = undefined;
   }
 
   ngOnInit(): void {
+    this.experienceService.getExperience().subscribe((data:Experience[]) => {
+      console.log('getting experience');
+      console.log(data);
+      this.experience = data;
+    });
   }
 
   setStartEnd(startingPoint: number, endingPoint: number, increment: number, footsteps: Footstep[]):  Footstep[] {
@@ -59,6 +70,17 @@ export class MyExperienceComponent implements OnInit {
       endingPoint+=increment;
       console.log(startingPoint)
       return f;
+    });
+  }
+
+  open(name: string) {
+    console.log('attempting to open '+name);
+    console.log(this.experience)
+    this.selectedExperience = this.experience.find(e => {
+      if(e.company.name === name) {
+        return e;
+      }
+      return undefined;
     });
   }
 

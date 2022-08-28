@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule, ScreenTrackingService,UserTrackingService } from '@angular/fire/compat/analytics';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { HomePageModule } from './pages/navigating/home-page/home-page.module';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     HomePageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    provideFirestore(() => getFirestore())
+    AngularFirestoreModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

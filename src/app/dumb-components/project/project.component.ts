@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Company, Project } from 'src/app/models/company.model';
+import { Experience, Project } from 'src/app/models/company.model';
 
 @Component({
   selector: 'app-project',
@@ -7,20 +7,14 @@ import { Company, Project } from 'src/app/models/company.model';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
-  @Input() company: Company;
+  @Input() experience: Experience | undefined;
   logoPattern: string;
-  selectedProject: Project;
+  selectedProject: Project | undefined;
 
   constructor() { 
-    this.company = {
-      name: '',
-      logo: ''
-    };
+    this.experience = undefined;
     this.logoPattern = '';
-    this.selectedProject = {
-      name: '',
-      description: []
-    }
+    this.selectedProject = undefined;
   }
 
   ngOnInit(): void {
@@ -28,7 +22,7 @@ export class ProjectComponent implements OnInit {
   }
 
   getLogoPattern(): string {
-    return `url(#${this.company.logo})`;
+    return `url(#${this.experience?.company?.logo})`;
   }
 
 }
