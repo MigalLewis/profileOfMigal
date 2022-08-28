@@ -7,6 +7,8 @@ export interface Company {
 
 export interface Project {
     name:string;
+    role: string;
+    shortDescription: string;
     description: string[];
     technologies: string[];
 }

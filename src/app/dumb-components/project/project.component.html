@@ -1,17 +1,23 @@
 <div class="job-group">
-    <svg *ngIf="experience" class="logo" viewBox="0 0 124 125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <rect y="0.533447" width="124" height="124.184" [attr.fill]="logoPattern"/>
-    </svg>
+    <div class="header" *ngIf="experience">
+        <svg class="logo" viewBox="0 0 124 125" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect y="0.533447" width="124" height="124.184" [attr.fill]="logoPattern"/>
+        </svg>
+        <p class="company-name">{{experience?.company?.name}}</p>
+    </div>
+
     <div class="projects">
         <div class="row">
-            <div class="col-3">
-                <button class="project-name" *ngFor="let project of experience?.projects">
+            <div class="col-3 actions">
+                <button (click)="onSelectProject(project.name)" class="btn project-name" *ngFor="let project of experience?.projects">
                     {{project.name}}
                 </button>
             </div>
             <div class="col-9">
                 <div *ngIf="selectedProject" class="project-description">
-                    <p *ngFor="let description of selectedProject.description"></p>
+                    <p *ngIf="selectedProject?.role" class="role">Role: {{selectedProject.role}}</p>
+                    <p>{{selectedProject.shortDescription}}</p>
+                    <p *ngFor="let description of selectedProject.description">{{description}}</p>
                 </div>
             </div>
         </div>

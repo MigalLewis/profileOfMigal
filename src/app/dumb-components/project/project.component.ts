@@ -25,4 +25,10 @@ export class ProjectComponent implements OnInit {
     return `url(#${this.experience?.company?.logo})`;
   }
 
+  onSelectProject(projectName: string): void {
+    this.selectedProject = this.experience?.projects.find(p=>p.name==projectName);
+    console.log('this.selectedProject');
+    console.log(this.selectedProject);
+  }
+
 }
