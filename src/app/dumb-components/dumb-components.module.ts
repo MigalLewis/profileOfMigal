@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { ProjectComponent } from './project/project.component';
 
 
 
@@ -10,7 +11,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
   declarations: [
     HeaderComponent,
     ContactComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ProjectComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
   exports: [
     HeaderComponent,
     ContactComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ProjectComponent
   ]
 })
 export class DumbComponentsModule { }
