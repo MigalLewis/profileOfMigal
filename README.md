@@ -38,3 +38,21 @@ add `@import '~bootstrap/scss/bootstrap.scss';` to styles.scss
 
 https://getbootstrap.com/docs/5.1/getting-started/introduction/
 https://icons.getbootstrap.com/
+
+## ToDo
+
+### experience page
+Fix issue on loading new svgs
+redesign scroll
+add button to indicate more
+default to first Item
+add from date and to date
+include description
+
+### nav
+Add download cv
+
+### Other
+fix bottom of screen showing white
+change to use single page instead of scroll
+add animation for moving to pages
