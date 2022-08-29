@@ -57,8 +57,6 @@ export class MyExperienceComponent implements OnInit {
 
   ngOnInit(): void {
     this.experienceService.getExperience().subscribe((data:Experience[]) => {
-      console.log('getting experience');
-      console.log(data);
       this.experience = data;
     });
   }
@@ -74,8 +72,6 @@ export class MyExperienceComponent implements OnInit {
   }
 
   open(name: string) {
-    console.log('attempting to open '+name);
-    console.log(this.experience)
     this.selectedExperience = this.experience.find(e => {
       if(e.company.name === name) {
         return e;
