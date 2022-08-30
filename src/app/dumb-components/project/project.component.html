@@ -9,9 +9,11 @@
     <div class="projects">
         <div class="row">
             <div class="col-3 actions scroll-bar">
-                <button (click)="onSelectProject(project.name)" class="btn project-name" *ngFor="let project of experience?.projects">
-                    {{project.name}}
-                </button>
+                <div *ngFor="let project of experience?.projects">
+                    <button #action (click)="onSelectProject(project.name)" class="btn project-name" >
+                        {{project.name}}
+                    </button>
+                </div>
             </div>
             <div class="col-9">
                 <div *ngIf="selectedProject" class="project-description scroll-bar">

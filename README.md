@@ -43,9 +43,7 @@ https://icons.getbootstrap.com/
 
 ### experience page
 Fix issue on loading new svgs
-redesign scroll
 add button to indicate more
-default to first Item
 add from date and to date
 include description
 
