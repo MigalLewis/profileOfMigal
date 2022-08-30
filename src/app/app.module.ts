@@ -8,6 +8,7 @@ import { AngularFireAnalyticsModule, ScreenTrackingService,UserTrackingService }
 import { HomePageModule } from './pages/navigating/home-page/home-page.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { DumbComponentsModule } from './dumb-components/dumb-components.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     HomePageModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    DumbComponentsModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

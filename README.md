@@ -51,5 +51,4 @@ Add download cv
 
 ### Other
 fix bottom of screen showing white
-change to use single page instead of scroll
 add animation for moving to pages

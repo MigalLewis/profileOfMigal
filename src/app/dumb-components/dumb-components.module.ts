@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProjectComponent } from './project/project.component';
 import { FirebaseToDatePipe } from '../pipes/FirebaseToDate.pipe';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { FirebaseToDatePipe } from '../pipes/FirebaseToDate.pipe';
     FirebaseToDatePipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
