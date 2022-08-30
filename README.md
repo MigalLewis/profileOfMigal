@@ -46,9 +46,6 @@ Fix issue on loading new svgs
 add button to indicate more
 include description
 
-### nav
-Add download cv
-
 ### Other
 fix bottom of screen showing white
-add animation for moving to pages
+make router animations smoother
