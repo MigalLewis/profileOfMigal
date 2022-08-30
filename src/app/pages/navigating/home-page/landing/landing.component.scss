@@ -1,5 +1,11 @@
 @import '../../../../../assets/styles/variables.scss';
 
+.nav-div {
+    height: 64px;
+    width: 100vw;
+    background: $primary;
+ }
+
 .landing {
     display: grid;
     height: 100vh;
@@ -14,7 +20,7 @@
     position: relative;
     width: 492px;
     left: 100px;
-    top: 234px;
+    top: 0px;
     height: 280px;
     background: rgba(151, 197, 171, 0.64);
     border-radius: 6px;

@@ -29,13 +29,14 @@
 .container {
     z-index: 2;
     position: relative;
+    max-height: 90%;
 }
 
 h2 {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 4rem;
     line-height: 85px;
 
     color: #FFFFFF;
@@ -53,12 +54,12 @@ img {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 1.6rem;
     line-height: 43px;
     /* identical to box height */
 
-    margin-top: 48px;
-    color: #F5F5F5;
+    margin-top: 32px;
+    color: #FBFDD5;
 }
 
 .content {
@@ -66,8 +67,14 @@ img {
     font-family: 'Oxygen';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.2rem;
     line-height: 30px;
 
-    color: #FFFFFF;
+    color: #FBFDD5;
 }
+
+.nav-div {
+    height: 64px;
+    width: 100vw;
+    background: $primary;
+ }

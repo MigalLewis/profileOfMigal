@@ -2,4 +2,7 @@
 <div class='contact'>
     <app-contact></app-contact>
 </div>
-<router-outlet></router-outlet>
+<div [@slideInAnimation]="outlet.isActivated ? outlet.activatedRoute : ''" >
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
+

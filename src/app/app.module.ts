@@ -9,6 +9,7 @@ import { HomePageModule } from './pages/navigating/home-page/home-page.module';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { DumbComponentsModule } from './dumb-components/dumb-components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DumbComponentsModule } from './dumb-components/dumb-components.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HomePageModule,
     AngularFireModule.initializeApp(environment.firebase),

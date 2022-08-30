@@ -1,5 +1,11 @@
 @import '../../../../../assets/styles/variables.scss';
 
+.nav-div {
+   height: 64px;
+   width: 100vw;
+   background: $primary;
+}
+
 .my-experience {
  background: $secondary;
  text-align: center;
@@ -123,6 +129,6 @@ h2 {
     font-size: 64px;
     line-height: 85px;
 
-    color: #FFFFFF;
+    color: $white;
     margin-bottom: 64px;
 }

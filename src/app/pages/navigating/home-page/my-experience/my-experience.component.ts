@@ -66,7 +66,6 @@ export class MyExperienceComponent implements OnInit {
       f.startEnd=startingPoint+'s, '+endingPoint+'s';
       startingPoint+=increment;
       endingPoint+=increment;
-      console.log(startingPoint)
       return f;
     });
   }

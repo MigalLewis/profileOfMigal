@@ -28,15 +28,13 @@ const routes: Routes = [
     path: 'skills',
     component: MySkillsComponent
   },
-  {
-    path: 'experience',
-    component: MyExperienceComponent
-  },
   { path: "home", component: HomePageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
