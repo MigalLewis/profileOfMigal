@@ -44,7 +44,6 @@ https://icons.getbootstrap.com/
 ### experience page
 Fix issue on loading new svgs
 add button to indicate more
-add from date and to date
 include description
 
 ### nav

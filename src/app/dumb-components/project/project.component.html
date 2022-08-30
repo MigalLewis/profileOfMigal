@@ -4,6 +4,7 @@
             <rect y="0.533447" width="124" height="124.184" [attr.fill]="logoPattern"/>
         </svg>
         <p class="company-name">{{experience?.company?.name}}</p>
+        <p class="dates">( {{experience.dateFrom | timestampToDate}} to {{experience.dateTo | timestampToDate}} )</p>
     </div>
 
     <div class="projects">

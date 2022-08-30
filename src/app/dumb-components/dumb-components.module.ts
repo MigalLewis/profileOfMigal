@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProjectComponent } from './project/project.component';
+import { FirebaseToDatePipe } from '../pipes/FirebaseToDate.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { ProjectComponent } from './project/project.component';
     HeaderComponent,
     ContactComponent,
     ProgressBarComponent,
-    ProjectComponent
+    ProjectComponent,
+    FirebaseToDatePipe
   ],
   imports: [
     CommonModule
