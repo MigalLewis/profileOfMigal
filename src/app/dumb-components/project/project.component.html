@@ -8,13 +8,13 @@
 
     <div class="projects">
         <div class="row">
-            <div class="col-3 actions">
+            <div class="col-3 actions scroll-bar">
                 <button (click)="onSelectProject(project.name)" class="btn project-name" *ngFor="let project of experience?.projects">
                     {{project.name}}
                 </button>
             </div>
             <div class="col-9">
-                <div *ngIf="selectedProject" class="project-description">
+                <div *ngIf="selectedProject" class="project-description scroll-bar">
                     <p *ngIf="selectedProject?.role" class="role">Role: {{selectedProject.role}}</p>
                     <p>{{selectedProject.shortDescription}}</p>
                     <p *ngFor="let description of selectedProject.description">{{description}}</p>
