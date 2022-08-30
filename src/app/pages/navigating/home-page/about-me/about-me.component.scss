@@ -9,27 +9,27 @@
 
 .overlay-2 {
     width: 100vw;
-    height: 100%;
+    height: calc(100vh - 66px);
     background-color: $overlay2;
     position: absolute;
-    top: 0;
+    top:66px;
     left: 0;
     z-index: 1;
 }
 
 .overlay-1 {
     width: 100vw;
-    height: 100%;
+    height: calc(100vh - 66px);
     background: $background2;
     position: absolute;
-    top: 0;
     left: 0;
+    top:66px;
 }
 
 .container {
     z-index: 2;
     position: relative;
-    max-height: 90%;
+    height: calc(100vh - 66px);
 }
 
 h2 {
@@ -74,7 +74,7 @@ img {
 }
 
 .nav-div {
-    height: 64px;
+    height: 66px;
     width: 100vw;
     background: $primary;
- }
+}
