@@ -78,12 +78,12 @@
                 </defs>
             </svg>  
         </div>
-        <div class="footsteps">
+        <!-- <div class="footsteps">
             <svg [style.left]="footstep.x" [style.bottom]="footstep.y" [style.animation-delay]="footstep.startEnd" [style.transform]="footstep.transform" *ngFor="let footstep of footsteps" class="footstep" viewBox="0 0 46 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse rx="9.01024" ry="15.5272" transform="matrix(0.48374 0.875212 -0.874602 0.484841 27.5246 16.1748)" fill="#FBFDD5"/>
                 <ellipse rx="9.01024" ry="11.8737" transform="matrix(0.48374 0.875212 -0.874602 0.484841 14.7434 23.2602)" fill="#FBFDD5"/>
             </svg>
-        </div>
+        </div> -->
         <div *ngIf="selectedExperience" class="overlay">
             <app-project [experience]="selectedExperience"></app-project>
         </div>
