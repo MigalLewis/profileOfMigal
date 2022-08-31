@@ -206,6 +206,12 @@ h2 {
 @media only screen and (max-width: 600px) {
    .my-experience {
        height: 100%;
+
+       .footstep {
+         width: 38px;
+         height: 32px;
+         animation-duration: 9s, 9s;
+      }
    }
    .nav-div {
        position: fixed;
@@ -225,4 +231,6 @@ h2 {
    .my-experience .logo-4  {
       width: 300px;
    }
+
+
 }
