@@ -136,10 +136,16 @@ h2 {
 @media only screen and (max-width: 600px) {
    .my-experience {
        height: 100%;
-       min-height: 200vh;
+       min-height: 100vh;
        width: 100vw;
        max-width: 100vw;
        background-image: url('../../../../../assets/images/Migal_mobile.png');
+
+       .footstep {
+         width: 38px;
+         height: 32px;
+         animation-duration: 9s, 9s;
+      }
    }
    .nav-div {
        position: fixed;
@@ -150,6 +156,13 @@ h2 {
        padding-top: 64px;
        height: 100%;
    }
+
+  .overlay {
+      width: 100%;
+      height: 500px;
+      position: unset;
+      padding: 12px;
+  }
 
 
    .my-experience .logo-0 {
@@ -179,6 +192,7 @@ h2 {
       left: 0%;
       bottom: 28%;
       top: auto;
+      width: 300px;
    }
 
    .my-experience .logo-5 {
@@ -201,36 +215,4 @@ h2 {
       top: auto;
       width: 112px;
    }
-}
-
-@media only screen and (max-width: 600px) {
-   .my-experience {
-       height: 100%;
-
-       .footstep {
-         width: 38px;
-         height: 32px;
-         animation-duration: 9s, 9s;
-      }
-   }
-   .nav-div {
-       position: fixed;
-       z-index: 3;
-   }
-   .container {
-       padding-bottom: 12px;
-       padding-top: 64px;
-   }
-   .overlay {
-       width: 100%;
-       height: 500px;
-       position: unset;
-       padding: 12px;
-   }
-
-   .my-experience .logo-4  {
-      width: 300px;
-   }
-
-
 }
