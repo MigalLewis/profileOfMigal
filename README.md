@@ -44,6 +44,8 @@ https://icons.getbootstrap.com/
 ### experience page
 add button to indicate more
 include description
+add scroll to top for mobile
 
 ### Other
 make router animations smoother
+add loading screen

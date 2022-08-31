@@ -8,6 +8,7 @@ import { FirebaseToDatePipe } from '../pipes/FirebaseToDate.pipe';
 import { RouterModule } from '@angular/router';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { BrowserModule } from '@angular/platform-browser';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
@@ -17,7 +18,8 @@ import { BrowserModule } from '@angular/platform-browser';
     ContactComponent,
     ProgressBarComponent,
     ProjectComponent,
-    FirebaseToDatePipe
+    FirebaseToDatePipe,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { BrowserModule } from '@angular/platform-browser';
     HeaderComponent,
     ContactComponent,
     ProgressBarComponent,
-    ProjectComponent
+    ProjectComponent,
+    LoadingComponent
   ]
 })
 export class DumbComponentsModule { }

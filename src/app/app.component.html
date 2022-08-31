@@ -1,3 +1,4 @@
+<app-loading *ngIf="loading"></app-loading>
 <app-header></app-header>
 <div class='contact'>
     <app-contact></app-contact>
@@ -5,4 +6,3 @@
 <div [@slideInAnimation]="outlet.isActivated ? outlet.activatedRoute : ''" >
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
-

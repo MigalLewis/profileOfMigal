@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Company, Experience } from 'src/app/models/company.model';
 import { Footstep } from 'src/app/models/footstep.model';
 import { ExperienceService } from 'src/app/services/experience.service';
+import { LoadingService } from 'src/app/services/loading.service';
 
 @Component({
   selector: 'app-my-experience',
@@ -14,7 +15,9 @@ export class MyExperienceComponent implements OnInit {
   experience: Experience[];
   selectedExperience: Experience | undefined;
 
-  constructor(private experienceService: ExperienceService) { 
+  constructor(private experienceService: ExperienceService,
+     private loadingService: LoadingService) { 
+    this.loadingService.startSpinner();
     this.innerWidth = window.innerWidth;
     if(this.innerWidth>600) {
       this.footsteps = this.getWebFootsteps();
@@ -29,6 +32,7 @@ export class MyExperienceComponent implements OnInit {
   ngOnInit(): void {
     this.experienceService.getExperience().subscribe((data:Experience[]) => {
       this.experience = data;
+      this.loadingService.stopSpinner();
     });
   }
 
