@@ -42,10 +42,8 @@ https://icons.getbootstrap.com/
 ## ToDo
 
 ### experience page
-Fix issue on loading new svgs
 add button to indicate more
 include description
 
 ### Other
-fix bottom of screen showing white
 make router animations smoother
