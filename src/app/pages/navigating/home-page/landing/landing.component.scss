@@ -140,6 +140,9 @@
     }
     .text-overlay {
         width: calc(100% - 24px);
+        height: 80%;
+        left: 0;
+        margin: 12px;
     }
     .tag-line {
         padding: 12px;
