@@ -9,7 +9,7 @@
 
 .overlay-2 {
     width: 100vw;
-    height: calc(100vh - 66px);
+    height: calc(100% - 66px);
     background-color: $overlay2;
     position: absolute;
     top:66px;
@@ -19,7 +19,7 @@
 
 .overlay-1 {
     width: 100vw;
-    height: calc(100vh - 66px);
+    height: calc(100% - 66px);
     background: $background2;
     position: absolute;
     left: 0;
@@ -77,4 +77,19 @@ img {
     height: 66px;
     width: 100vw;
     background: $primary;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-me {
+        height: 100%;
+    }
+    .nav-div {
+        position: fixed;
+        z-index: 3;
+    }
+    .container {
+        padding-bottom: 12px;
+        padding-top: 64px;
+        height: 100%;
+    }
 }
