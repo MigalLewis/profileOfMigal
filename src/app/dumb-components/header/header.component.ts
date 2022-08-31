@@ -18,13 +18,17 @@ export class HeaderComponent implements OnInit {
 
   togglePanel(collapseButton: HTMLElement, collapsePanel: HTMLElement) {
     if (this.isCollapsed) {
-      collapseButton.classList.add('collapsed');
-      collapsePanel.classList.remove('show');
+      this.close(collapseButton, collapsePanel);
     } else {
       collapsePanel.classList.add('show');
       collapseButton.classList.remove('collapsed');
     }
     this.isCollapsed = !this.isCollapsed
+  }
+
+  close(collapseButton: HTMLElement, collapsePanel: HTMLElement) {
+    collapseButton.classList.add('collapsed');
+    collapsePanel.classList.remove('show');
   }
 
 }

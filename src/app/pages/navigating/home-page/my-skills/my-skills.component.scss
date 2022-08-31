@@ -132,3 +132,23 @@ img {
 
     color: #FFFFFF;
 }
+
+@media only screen and (max-width: 600px) {
+    .my-skills {
+        height: 100%;
+    }
+    .nav-div {
+        position: fixed;
+        z-index: 3;
+    }
+    .container {
+        padding-bottom: 12px;
+        padding-top: 64px;
+    }
+    .overlay-1 .background-icon-6 {
+        bottom: 4%;
+    }
+    .overlay-1 .background-icon-7 {
+        top: 15%;
+    }
+}

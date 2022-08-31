@@ -6,19 +6,19 @@
           </button>
           <div  #navbarNav class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li (click)="close(navButton,navbarNav)" class="nav-item">
                 <a class="nav-link active" aria-current="page" [routerLink]="['/landing']" href="#home">Home</a>
               </li>
-              <li class="nav-item">
+              <li (click)="close(navButton,navbarNav)" class="nav-item">
                 <a class="nav-link" [routerLink]="['/skills']" href="#mySkills">My Skills</a>
               </li>
-              <li class="nav-item">
+              <li (click)="close(navButton,navbarNav)" class="nav-item">
                 <a class="nav-link" [routerLink]="['/experience']" href="#experience">Experience</a>
               </li>
-              <li class="nav-item">
+              <li (click)="close(navButton,navbarNav)" class="nav-item">
                 <a class="nav-link" [routerLink]="['/about']" href="#aboutMe">About Me</a>
               </li>
-              <li class="nav-item">
+              <li (click)="close(navButton,navbarNav)" class="nav-item">
                 <a class="nav-link btn btn-outline-secondary" href="https://drive.google.com/uc?export=download&id=1XiWHCf5KltlC6nYhZJ0zrHjNG0EW1Udv">Download CV</a>
               </li>
               

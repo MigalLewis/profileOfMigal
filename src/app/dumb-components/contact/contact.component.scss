@@ -47,16 +47,19 @@
 @media screen and (max-width: 575px) {
     .contact-div {
         width: 80vw;
-        height: 128px;
+        height: 64px;
+        margin: 0;
     }
     .vl {
         border-right: none;
         border-bottom: 1px solid $primary;
         margin: auto;
+        display: none;
     }
     .email {
         transform: rotate(0);
         margin-bottom: 0.8rem;
+        display: none;
     }
     .logo {
         width:42px;
