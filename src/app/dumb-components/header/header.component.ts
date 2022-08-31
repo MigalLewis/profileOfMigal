@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isCollapsed: boolean;
+
+  constructor() { 
+    this.isCollapsed = false;
+  }
 
   ngOnInit(): void {
+  }
+
+  togglePanel(collapseButton: HTMLElement, collapsePanel: HTMLElement) {
+    if (this.isCollapsed) {
+      collapseButton.classList.add('collapsed');
+      collapsePanel.classList.remove('show');
+    } else {
+      collapsePanel.classList.add('show');
+      collapseButton.classList.remove('collapsed');
+    }
+    this.isCollapsed = !this.isCollapsed
   }
 
 }
