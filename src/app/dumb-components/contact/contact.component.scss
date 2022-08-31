@@ -17,7 +17,7 @@
     font-family: 'Oxygen';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.4rem;
     line-height: 30px;
     margin-bottom: 222px;
     
@@ -27,20 +27,44 @@
 }
 
 .vl {
-    border-right: 1px solid #0E7388;
+    border-right: 1px solid $primary;
     height: 60px;
     margin-bottom: 12px;
     width: 20px;
 }
 
 .logo {
-    width:42;
-    height:42;
+    width:42px;
+    height:42px;
     margin: 12px 0;
 }
 
+.logos {
+    display: block;
+    
+}
+
 @media screen and (max-width: 575px) {
-    .contacts {
-        width: 100%;
+    .contact-div {
+        width: 80vw;
+        height: 128px;
+    }
+    .vl {
+        border-right: none;
+        border-bottom: 1px solid $primary;
+        margin: auto;
+    }
+    .email {
+        transform: rotate(0);
+        margin-bottom: 0.8rem;
+    }
+    .logo {
+        width:42px;
+        height:42px;
+        margin: 12px 0;
+    }
+    .logos {
+        display: flex;
+        justify-content: space-around;
     }
 }
