@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Experience, Project } from 'src/app/models/company.model';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-project',
@@ -10,6 +11,29 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   @Input() experience: Experience | undefined;
   @ViewChildren('action') actions: QueryList<ElementRef> | undefined;
 
+  config: SwiperOptions;  
+
+  images: Array<{src: string, alt:string}> = [
+    {
+      src: 'https://loremflickr.com/g/600/400/paris',
+      alt: 'Image 1',
+    }, {
+      src: 'https://loremflickr.com/600/400/brazil,rio',
+      alt: 'Image 2'
+    }, {
+      src: 'https://loremflickr.com/600/400/paris,girl/all',
+      alt: 'Image 3'
+    }, {
+      src: 'https://loremflickr.com/600/400/brazil,rio',
+      alt: 'Image 4'
+    }, {
+      src: 'https://loremflickr.com/600/400/paris,girl/all',
+      alt: 'Image 5'
+    }, {
+      src: 'https://loremflickr.com/600/400/brazil,rio',
+      alt: 'Image 6'
+    }    
+  ]
   
   logoPattern: string;
   selectedProject: Project | undefined;
@@ -19,6 +43,17 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     this.experience = undefined;
     this.logoPattern = '';
     this.selectedProject = undefined;
+    this.config = {
+      pagination: { 
+        el: '.swiper-pagination', 
+        clickable: true 
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      spaceBetween: 30
+    };
   }
 
   ngOnInit(): void {

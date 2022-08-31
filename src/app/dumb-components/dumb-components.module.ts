@@ -6,6 +6,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProjectComponent } from './project/project.component';
 import { FirebaseToDatePipe } from '../pipes/FirebaseToDate.pipe';
 import { RouterModule } from '@angular/router';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -18,7 +20,9 @@ import { RouterModule } from '@angular/router';
     FirebaseToDatePipe
   ],
   imports: [
+    BrowserModule,
     CommonModule,
+    NgxUsefulSwiperModule,
     RouterModule
   ],
   exports: [

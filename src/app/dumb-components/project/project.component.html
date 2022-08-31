@@ -1,4 +1,4 @@
-<div class="job-group">
+<!-- <div class="job-group">
     <div class="header" *ngIf="experience">
         <p class="company-name">{{experience?.company?.name}}</p>
         <p class="dates">( {{experience.dateFrom | timestampToDate}} to {{experience.dateTo | timestampToDate}} )</p>
@@ -22,4 +22,26 @@
             </div>
         </div>
     </div>
+</div> -->
+<div class="job-group">
+    <div class="header" *ngIf="experience">
+        <p class="company-name">{{experience?.company?.name}}</p>
+        <p class="dates">( {{experience.dateFrom | timestampToDate}} to {{experience.dateTo | timestampToDate}} )</p>
+    </div>
+    <swiper [config]="config">
+        <div class="swiper-wrapper " >
+          <div class="swiper-slide" *ngFor="let project of experience?.projects">
+            <p class="project-name">{{project.name}}</p>
+            <hr>
+            <div class="projects">
+                <p *ngIf="project?.role" class="role">Role: {{project.role}}</p>
+                <p class="short-description">{{project.shortDescription}}</p>
+                <p class="description" *ngFor="let description of project.description">{{description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </swiper>
 </div>

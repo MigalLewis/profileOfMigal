@@ -1,8 +1,5 @@
 @import '../../../assets/styles/variables.scss';
 
-.projects {
-    border: solid 1px $primary;
-}
 
 .header {
     display: flex;
@@ -36,55 +33,52 @@
     }
 }
 
+.project-name {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    color: $primary;
+}
+
 .projects {
-    height: 80%;
+    color: $tertiary;
+    padding: 0 60px;
+    margin: auto;
+    overflow-y: scroll ;
+    height: 64%;
+
+    .role {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .short-description {
+        text-align: left;
+    }
+
+    .description {
+        text-align: left;
+    }
 }
 
 .row {
     height: 100%;
 }
 
-.actions {
-    border-right: solid 1px $primary;
-    padding: 0;
-    padding-left: 15px;
-    height: 100%;
-    overflow-y: scroll;
-}
-
-.project-name {
-    width: 100%;
-    height: 80px;
-    border-bottom: solid 1px $primary;
-    border-radius: 0;
-    background: rgba(125, 234, 223, 0.64);
-}
-
-.project-name:focus {
-    border: none;
-    border-bottom: solid 1px #0E7388;
-    border-left: solid 6px #0E7388;
-}
 
 .job-group {
     height: 100%;
+}
+
+swiper {
+    height: 100%;
+    width: 100%;
 }
 
 .col-9 {
     height: 100%;
 }
 
-.project-description {
-    font-size: 18px;
-    height: 100%;
-	overflow-y: scroll;
-    text-align: left;
-    padding: 12px;
-
-    .role {
-        font-weight: bold;
-    }
-}
 
 .scroll-bar::-webkit-scrollbar-track
 {
@@ -103,4 +97,17 @@
 {
     border-radius: 2px;
     background-color: $primary;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+
+        .company-name {
+            line-height: 42px
+        }
+        .dates {
+            line-height: 32px;
+        }
+    }
 }
