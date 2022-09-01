@@ -29,7 +29,7 @@
 .container {
     z-index: 2;
     position: relative;
-    height: calc(100vh - 66px);
+    height: calc(100% - 66px);
 }
 
 h2 {
@@ -45,8 +45,8 @@ h2 {
 
 img {
     border-radius: 50%;
-    height: 336px;
-    width: 336px;
+    height: 296px;
+    width: 296px;
 }
 
 .header {
@@ -55,10 +55,8 @@ img {
     font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 43px;
-    /* identical to box height */
-
-    margin-top: 32px;
+    line-height: 1.6rem;
+    margin-top: 12px;
     color: #FBFDD5;
 }
 
