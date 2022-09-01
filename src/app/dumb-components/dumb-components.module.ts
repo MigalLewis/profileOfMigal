@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoadingComponent } from './loading/loading.component';
+import { PokemonComponent } from './pokemon/pokemon.component';
 
 
 
@@ -19,7 +20,8 @@ import { LoadingComponent } from './loading/loading.component';
     ProgressBarComponent,
     ProjectComponent,
     FirebaseToDatePipe,
-    LoadingComponent
+    LoadingComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { LoadingComponent } from './loading/loading.component';
     ContactComponent,
     ProgressBarComponent,
     ProjectComponent,
-    LoadingComponent
+    LoadingComponent,
+    PokemonComponent
   ]
 })
 export class DumbComponentsModule { }

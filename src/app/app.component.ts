@@ -24,7 +24,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       '../assets/images/Migal_begin_journey_web.jpg',
       '../assets/images/Migal_Career_Journey.png',
       '../assets/images/Migal_mobile.png',
-      '../assets/images/profile (1).jpg'
+      '../assets/images/profile (1).jpg',
+      '../assets/images/pokeball.png',
+      '../assets/images/otom.png',
     ];
   }
 

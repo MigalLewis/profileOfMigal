@@ -1,0 +1,63 @@
+<div class="wooden-background">
+  <div class="canvas">
+    <div class="table">
+      <div (click)="openPokeBall(pokemon)"
+       [ngClass]="selectedPokemon.id === pokemon.id ? 'open' : ''" class="ball pokeball"
+        *ngFor="let pokemon of pokemonList" ></div>
+    </div>
+  </div>
+  <div *ngIf="selectedPokemon && showModal" class="rotom-background">
+    <div class="rotom">
+      <div  class="rotom-screen">
+        <svg  class="svg-rotom">
+          <rect class="svg-background" />
+          <rect class="svg-skew" />
+          <rect class="svg-body" />
+          <rect class="svg-skew" />
+        </svg>
+        <div class="pokedex">
+          <div class="pokedex-image">
+            <img [src]="selectedPokemon.image">
+          </div>
+          <div class="pokedex-info">
+            <div class="header">
+              <div class="header-no">
+                <p >No. {{selectedPokemon.id}}</p>
+              </div>
+              <div class="header-name">
+                <h6>{{selectedPokemon.name}}</h6>
+                <img src="../../assets/images/pokeball.png"/>
+              </div>
+            </div>
+            <div class="species">
+              <p>{{selectedPokemon.species}}</p>
+            </div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Type</td>
+                  <td>
+                    <div class="types">
+                      <p *ngFor="let type of selectedPokemon.types" class="type-tag">{{type}}</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Height</td>
+                  <td>{{selectedPokemon.height}}</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td>{{selectedPokemon.weight}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="description">
+              <p>{{selectedPokemon.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

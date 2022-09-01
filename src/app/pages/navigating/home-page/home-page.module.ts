@@ -6,6 +6,7 @@ import { DumbComponentsModule } from 'src/app/dumb-components/dumb-components.mo
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyExperienceComponent } from './my-experience/my-experience.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -15,7 +16,8 @@ import { MyExperienceComponent } from './my-experience/my-experience.component';
     HomePageComponent,
     MySkillsComponent,
     AboutMeComponent,
-    MyExperienceComponent
+    MyExperienceComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,

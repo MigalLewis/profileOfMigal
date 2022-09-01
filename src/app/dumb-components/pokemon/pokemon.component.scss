@@ -1,0 +1,600 @@
+// Please See Junior's work that I edited.
+// https://codepen.io/juniorfrontend/pen/JjdQRjx
+
+@import '../../../assets/styles/variables.scss';
+
+.wooden-background {
+  position: relative;
+  margin: 30px auto;
+  padding: 15px 0;
+  width: 90%;
+  height: 300px;
+	background: linear-gradient(
+		0,
+		#af8b60 0,
+		#af8b60 5px,
+		#c69c6d 5px
+  );
+  background-size: 100% 30px;
+}
+
+.canvas {
+	top: 10px;
+	padding: 15px;
+	text-align: center;
+}
+
+.table {
+  position: relative;
+  max-width: 70%;
+
+	display: inline-flex;
+	justify-content: center;
+	padding: 0 40px 80px;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background: #694e32;
+	border: 5px solid $dark;
+
+	&:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 5px;
+		bottom: 10px;
+		left: 0;
+		background: $dark;
+	}
+}
+
+.ball {
+	width: 60px;
+	height: 60px;
+	margin: -15px 5px;
+	cursor: pointer;
+	transition: transform .2s;
+	z-index: 2;
+}
+
+.ball:before {
+	content: '';
+	display: block;
+	width: 5px;
+	height: 5px;
+}
+
+.ball:hover { transform: translateY(-12px) }
+
+.pokeball:before {
+	box-shadow:
+		// linha 1
+		5px 0 transparent,
+		10px 0 transparent,
+		15px 0 transparent,
+		20px 0 #000,
+		25px 0 #000,
+		30px 0 #000,
+		35px 0 #000,
+		40px 0 transparent,
+		45px 0 transparent,
+		50px 0 transparent,
+		55px 0 transparent,
+		// linha 2
+		0 5px transparent,
+		5px 5px transparent,
+		10px 5px #000,
+		15px 5px #000,
+		20px 5px #f80302,
+		25px 5px #f80302,
+		30px 5px #a40000,
+		35px 5px #a40000,
+		40px 5px #000,
+		45px 5px #000,
+		50px 5px transparent,
+		55px 5px transparent,
+		// linha 3
+		0 10px transparent,
+		5px 10px #000,
+		10px 10px #f80302,
+		15px 10px #f80302,
+		20px 10px lighten(#f80302, 40%),
+		25px 10px #f80302,
+		30px 10px #f80302,
+		35px 10px #a40000,
+		40px 10px #a40000,
+		45px 10px #a40000,
+		50px 10px #000,
+		55px 10px transparent,
+		// linha 4
+		0 15px transparent,
+		5px 15px #000,
+		10px 15px #f80302,
+		15px 15px lighten(#f80302, 40%),
+		20px 15px #fff,
+		25px 15px lighten(#f80302, 40%),
+		30px 15px #f80302,
+		35px 15px #f80302,
+		40px 15px #a40000,
+		45px 15px #a40000,
+		50px 15px #000,
+		55px 15px transparent,
+		// linha 5
+		0 20px #000,
+		5px 20px #f80302,
+		10px 20px #f80302,
+		15px 20px #f80302,
+		20px 20px lighten(#f80302, 40%),
+		25px 20px #f80302,
+		30px 20px #f80302,
+		35px 20px #f80302,
+		40px 20px #f80302,
+		45px 20px #a40000,
+		50px 20px #a40000,
+		55px 20px #000,
+		// linha 6
+		0 25px #000,
+		5px 25px #f80302,
+		10px 25px #f80302,
+		15px 25px #f80302,
+		20px 25px #f80302,
+		25px 25px #000,
+		30px 25px #000,
+		35px 25px #f80302,
+		40px 25px #a40000,
+		45px 25px #a40000,
+		50px 25px #a40000,
+		55px 25px #000,
+		// linha 7
+		0 30px #000,
+		5px 30px #000,
+		10px 30px #f80302,
+		15px 30px #f80302,
+		20px 30px #000,
+		25px 30px #fff,
+		30px 30px #c8c7c5,
+		35px 30px #000,
+		40px 30px #a40000,
+		45px 30px #a40000,
+		50px 30px #000,
+		55px 30px #000,
+		// linha 8
+		0 35px #000,
+		5px 35px #fff,
+		10px 35px #000,
+		15px 35px #000,
+		20px 35px #000,
+		25px 35px #c8c7c5,
+		30px 35px #c8c7c5,
+		35px 35px #000,
+		40px 35px #000,
+		45px 35px #000,
+		50px 35px #c8c7c5,
+		55px 35px #000,
+		// linha 9
+		0 40px transparent,
+		5px 40px #000,
+		10px 40px #fff,
+		15px 40px #fff,
+		20px 40px #fff,
+		25px 40px #000,
+		30px 40px #000,
+		35px 40px #c8c7c5,
+		40px 40px #c8c7c5,
+		45px 40px #c8c7c5,
+		50px 40px #000,
+		55px 40px transparent,
+		// linha 10
+		0 45px transparent,
+		5px 45px #000,
+		10px 45px #c8c7c5,
+		15px 45px #fff,
+		20px 45px #fff,
+		25px 45px #fff,
+		30px 45px #c8c7c5,
+		35px 45px #c8c7c5,
+		40px 45px #c8c7c5,
+		45px 45px #c8c7c5,
+		50px 45px #000,
+		55px 45px transparent,
+		// linha 11
+		0 50px transparent,
+		5px 50px transparent,
+		10px 50px #000,
+		15px 50px #000,
+		20px 50px #c8c7c5,
+		25px 50px #c8c7c5,
+		30px 50px #c8c7c5,
+		35px 50px #c8c7c5,
+		40px 50px #000,
+		45px 50px #000,
+		50px 50px transparent,
+		55px 50px transparent,
+		// linha 12
+		0 55px transparent,
+		5px 55px transparent,
+		10px 55px transparent,
+		15px 55px transparent,
+		20px 55px #000,
+		25px 55px #000,
+		30px 55px #000,
+		35px 55px #000,
+		40px 55px transparent,
+		45px 55px transparent,
+		50px 55px transparent,
+		55px 55px transparent
+	;
+}
+
+.pokeball.open:before {
+	background: #a40000;
+	box-shadow:
+		// linha -3
+		0 -20px transparent,
+		5px -20px transparent,
+		10px -20px transparent,
+		15px -20px transparent,
+		20px -20px #f80302,
+		25px -20px #000,
+		30px -20px #000,
+		35px -20px #a40000,
+		40px -20px transparent,
+		45px -20px transparent,
+		50px -20px transparent,
+		55px -20px transparent,
+		// linha -2
+		0 -15px transparent,
+		5px -15px transparent,
+		10px -15px #f80302,
+		15px -15px #a40000,
+		20px -15px #000,
+		25px -15px #fff,
+		30px -15px #b5b5b5,
+		35px -15px #000,
+		40px -15px #a40000,
+		45px -15px #a40000,
+		50px -15px transparent,
+		55px -15px transparent,
+		// linha -1
+		0 -10px transparent,
+		5px -10px #f80302,
+		10px -10px #000,
+		15px -10px #000,
+		20px -10px #a3a3a3,
+		25px -10px #000,
+		30px -10px #000,
+		35px -10px #7a7a7a,
+		40px -10px #000,
+		45px -10px #000,
+		50px -10px #a40000,
+		55px -10px transparent,
+		// linha 0
+		0 -5px transparent,
+		5px -5px #000,
+		10px -5px #a3a3a3,
+		15px -5px #a3a3a3,
+		20px -5px #a3a3a3,
+		25px -5px #a3a3a3,
+		30px -5px #7a7a7a,
+		35px -5px #7a7a7a,
+		40px -5px #7a7a7a,
+		45px -5px #7a7a7a,
+		50px -5px #000,
+		55px -5px transparent,
+		// linha 1
+		5px 0 #a3a3a3,
+		10px 0 #a3a3a3,
+		15px 0 #a3a3a3,
+		20px 0 #a3a3a3,
+		25px 0 #a3a3a3,
+		30px 0 #a3a3a3,
+		35px 0 #7a7a7a,
+		40px 0 #7a7a7a,
+		45px 0 #7a7a7a,
+		50px 0 #7a7a7a,
+		55px 0 #a40000,
+		// linha 2
+		0 5px #000,
+		5px 5px transparent,
+		10px 5px #a3a3a3,
+		15px 5px #a3a3a3,
+		20px 5px #a3a3a3,
+		25px 5px #a3a3a3,
+		30px 5px #a3a3a3,
+		35px 5px #7a7a7a,
+		40px 5px #7a7a7a,
+		45px 5px #7a7a7a,
+		50px 5px #7a7a7a,
+		55px 5px #000,
+		// linha 3
+		0 10px #000,
+		5px 10px #a3a3a3,
+		10px 10px #a3a3a3,
+		15px 10px #a3a3a3,
+		20px 10px #a3a3a3,
+		25px 10px #a3a3a3,
+		30px 10px #7a7a7a,
+		35px 10px #7a7a7a,
+		40px 10px #7a7a7a,
+		45px 10px #7a7a7a,
+		50px 10px #7a7a7a,
+		55px 10px #000,
+		// linha 4
+		0 15px transparent,
+		5px 15px #000,
+		10px 15px #a3a3a3,
+		15px 15px #a3a3a3,
+		20px 15px #7a7a7a,
+		25px 15px #7a7a7a,
+		30px 15px #7a7a7a,
+		35px 15px #7a7a7a,
+		40px 15px #7a7a7a,
+		45px 15px #7a7a7a,
+		50px 15px #000,
+		55px 15px transparent,
+		// linha 5
+		0 20px transparent,
+		5px 20px transparent,
+		10px 20px #000,
+		15px 20px #000,
+		20px 20px #7a7a7a,
+		25px 20px #7a7a7a,
+		30px 20px #7a7a7a,
+		35px 20px #7a7a7a,
+		40px 20px #000,
+		45px 20px #000,
+		50px 20px transparent,
+		55px 20px transparent,
+		// linha 6
+		0 25px transparent,
+		5px 25px #000,
+		10px 25px #fff,
+		15px 25px #000,
+		20px 25px #000,
+		25px 25px #000,
+		30px 25px #000,
+		35px 25px #000,
+		40px 25px #000,
+		45px 25px #c8c7c5,
+		50px 25px #000,
+		55px 25px transparent,
+		// linha 7
+		0 30px #000,
+		5px 30px #fff,
+		10px 30px #000,
+		15px 30px #000,
+		20px 30px #000,
+		25px 30px #000,
+		30px 30px #000,
+		35px 30px #000,
+		40px 30px #000,
+		45px 30px #000,
+		50px 30px #c8c7c5,
+		55px 30px #000,
+		// linha 8
+		0 35px #000,
+		5px 35px #c8c7c5,
+		10px 35px #000,
+		15px 35px #000,
+		20px 35px #000,
+		25px 35px #000,
+		30px 35px #000,
+		35px 35px #000,
+		40px 35px #000,
+		45px 35px #000,
+		50px 35px #c8c7c5,
+		55px 35px #000,
+		// linha 9
+		0 40px transparent,
+		5px 40px #000,
+		10px 40px #fff,
+		15px 40px #000,
+		20px 40px #000,
+		25px 40px #000,
+		30px 40px #000,
+		35px 40px #000,
+		40px 40px #000,
+		45px 40px #c8c7c5,
+		50px 40px #000,
+		55px 40px transparent,
+		// linha 10
+		0 45px transparent,
+		5px 45px #000,
+		10px 45px #c8c7c5,
+		15px 45px #fff,
+		20px 45px #fff,
+		25px 45px #c8c7c5,
+		30px 45px #c8c7c5,
+		35px 45px #c8c7c5,
+		40px 45px #c8c7c5,
+		45px 45px #c8c7c5,
+		50px 45px #000,
+		55px 45px transparent,
+		// linha 11
+		0 50px transparent,
+		5px 50px transparent,
+		10px 50px #000,
+		15px 50px #000,
+		20px 50px #c8c7c5,
+		25px 50px #c8c7c5,
+		30px 50px #c8c7c5,
+		35px 50px #c8c7c5,
+		40px 50px #000,
+		45px 50px #000,
+		50px 50px transparent,
+		55px 50px transparent,
+		// linha 12
+		0 55px transparent,
+		5px 55px transparent,
+		10px 55px transparent,
+		15px 55px transparent,
+		20px 55px #000,
+		25px 55px #000,
+		30px 55px #000,
+		35px 55px #000,
+		40px 55px transparent,
+		45px 55px transparent,
+		50px 55px transparent,
+		55px 55px transparent
+	;
+}
+
+
+
+
+.show-modal {
+  display: block;
+}
+.hide-modal {
+  display: none;
+}
+.rotom-background {
+    height: 100%;
+    position: absolute;
+    bottom: 10;
+    top: 20px;
+    left: 279px;
+    .rotom {
+      color: white;
+      height: 550px;
+      width: 482px;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.7s ease;
+      background-image: url(/assets/images/rotom.png);
+      text-align: left;
+      padding: 190px 13px 20px 20px;
+      transform: rotate(20deg);
+      margin: auto;
+    }
+    .rotom-screen {
+      height: 234px;
+      width: 454px;
+      border-radius: 18px;
+      background-color: black;
+      margin: 0;
+      display: flex;
+      position: absolute;
+      top: 211px;
+      left: 15px;
+    }
+    .svg-rotom {
+      height: 234px;
+      width: 453px;
+      position: absolute;
+    }
+    .svg-background {
+      height: 233px;
+      width: 453px;
+      fill: #D2D0DF;
+      rx: 18px;
+    }
+    .svg-skew {
+      fill: #FF4E41;
+      x: 36;
+      width: 55px;
+      height: 234px;
+      transform: skewX(-25deg);
+    }
+    .svg-skew:nth-child(2) {
+      x: 472;
+    }
+    .svg-body {
+      fill: #FF6D4E;
+      width: 437px;
+      height: 211px;
+      height: 234px;
+      x: 36;
+      y: 0;
+      transform: skewX(-25deg);
+    }
+    .pokedex {
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      padding: 25px 22px 25px 60px;
+      display: flex;
+    }
+    .pokedex-image {
+      width: 35%;
+      img {
+        margin-top: 35px;
+        width: 125px;
+      }
+    }
+    .pokedex-info {
+      width: 65%;
+      height: 100%;
+    }
+    .header {
+      background-color: #FF4E41;
+      color: white;
+      width: 248px;
+      height: 30px;
+      display: flex;
+
+      font-size: 14px;
+      line-height: 20px;
+      img {
+        height: 20px;
+      }
+      .header-name {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 70%;
+        padding: 5px;
+        background-color: #353235;
+      }
+      .header-no {
+        padding: 5px;
+        height: 100%;
+        width: 30%;
+      }
+    }
+    .species {
+      width: 80%;
+      height: 25px;
+      background-color: #D2D0DF;
+      color: #1f2123;
+      text-align: center;
+      padding: 0 5px;
+      margin: 3px auto;
+    }
+    table {
+      width: 80%;
+      margin: 3px auto;
+      color: #1f2123;
+
+      td {
+        background-color: #D2D0DF;
+        width: 50%;
+        font-size: 13px;
+      }
+      td:nth-of-type(2n) {
+        background-color: white;
+      }
+      .types {
+        display: flex;
+      }
+      .type-tag {
+        font-size: 11px;
+        background-color: #353235;
+        margin: 0 3px;
+        color: white;
+        padding: 0 2px;
+      }
+    }
+    .description {
+      background-color: white;
+      width: 80%;
+      margin: 3px auto;
+      color: #1f2123;
+      text-align: left;
+      padding: 5px;
+      padding: 8px 6px;
+      font-size: 9px;
+	  height: 76px;
+    }
+
+
+  }

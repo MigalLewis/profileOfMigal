@@ -5,6 +5,7 @@ import { HomePageComponent } from './pages/navigating/home-page/home-page.compon
 import { LandingComponent } from './pages/navigating/home-page/landing/landing.component';
 import { MyExperienceComponent } from './pages/navigating/home-page/my-experience/my-experience.component';
 import { MySkillsComponent } from './pages/navigating/home-page/my-skills/my-skills.component';
+import { NotFoundComponent } from './pages/navigating/home-page/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,11 @@ const routes: Routes = [
   {
     path: 'skills',
     component: MySkillsComponent
+  },
+  {
+    path: '**', 
+    pathMatch: 'full',
+    component: NotFoundComponent
   },
   { path: "home", component: HomePageComponent }
 ];
