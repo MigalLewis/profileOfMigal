@@ -45,5 +45,8 @@ https://icons.getbootstrap.com/
 add button to indicate more
 include description
 
+### 404
+make rotom more mobile friendly
+
 ### Other
 make router animations smoother

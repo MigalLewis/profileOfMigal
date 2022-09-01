@@ -439,7 +439,7 @@
 }
 
 
-
+// my work 
 
 .show-modal {
   display: block;
@@ -597,4 +597,15 @@
     }
 
 
+}
+
+@media screen and (max-width: 575px) { 
+	.rotom-background {
+	  left: -132px;
+	  top: 188px;
+	}
+	.rotom {
+		transition: rotate(274deg);
+	}
   }
+  
