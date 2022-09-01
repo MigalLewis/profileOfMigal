@@ -52,6 +52,13 @@ export class MyExperienceComponent implements OnInit {
       }
       return undefined;
     });
+    if(this.selectedExperience) {
+        window.scroll({ 
+          top: 0, 
+          left: 0, 
+          behavior: 'smooth' 
+        });
+    }
   }
 
   getWebFootsteps(): Footstep[] {
